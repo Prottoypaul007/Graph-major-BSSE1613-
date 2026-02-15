@@ -224,11 +224,9 @@ void solve_dynamic(Graph* g, int prob_id, double s_lon, double s_lat, double d_l
             }
         }
 
-        // --- GENERATE UNIQUE KML FILENAME ---
         char kml_filename[100];
         sprintf(kml_filename, "route_prob%d_%ld.kml", prob_id, (long)time(NULL));
 
-        // Tell Java what the generated filename is
         printf("\nSUCCESS_KML_READY:%s\n", kml_filename);
 
         FILE* f = fopen(kml_filename, "w");
